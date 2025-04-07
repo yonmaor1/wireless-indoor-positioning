@@ -4,7 +4,7 @@ import struct
 import math
 import time
 from scapy.all import Dot11, sniff
-from bluepy.btle import Scanner
+from bleak import BleakScanner as Scanner
 
 class PositionCalculator:
     def __init__(self, tech_type):
