@@ -1,5 +1,4 @@
 BLE Distances
-
 File: logs/rssi_data_1_1_ble.csv    
     Estimated position: x=0.57 m, y=7.10 m
 File: logs/rssi_data_1_4-5_ble.csv
@@ -39,3 +38,32 @@ File: logs/rssi_data_9_4-5_wifi.csv
     Estimated position: x=9.08 m, y=4.62 m
 File: logs/rssi_data_9_9_wifi.csv
     Estimated position: x=9.97 m, y=8.46 m
+
+Errors
+(1,1)
+    BLE: 6.12
+    WiFi: 3.24
+(1,4.5)
+    BLE: 1.64
+    WiFi: 0.38
+(1,9)
+    BLE: 1.25
+    WiFi: 2.71
+(4.5,1)
+    BLE: 0.31
+    WiFi: 0.49
+(4.5,4.5)
+    BLE: 0.44
+    WiFi: 0.42
+(4.5,9)
+    BLE: 0.42
+    WiFi: 0.16
+(9,1)
+    BLE: 0.49
+    WiFi: 1.01
+(9,4.5)
+    BLE: 0.19
+    WiFi: 0.14
+(9,9)
+    BLE: 0.57
+    WiFi: 1.11
