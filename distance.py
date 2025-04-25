@@ -1,10 +1,11 @@
 import numpy as np
 from statistics import mean
 import csv
+import math
 from datetime import datetime
 
 rssis1, rssis2, rssis3 = [], [], []
-with open("/Users/belleconnaught/Desktop/uni/S25/Wireless/wireless-indoor-positioning/logs/rssi_data_1_4-5_ble.csv", newline="") as f:
+with open("/Users/belleconnaught/Desktop/uni/S25/Wireless/wireless-indoor-positioning/logs/rssi_data_1_1_ble.csv", newline="") as f:
     reader = csv.reader(f)
     for i, row in enumerate(reader):
         if i != 0:
@@ -18,16 +19,22 @@ avg2 = mean(rssis2)
 avg3 = mean(rssis3)
 
 d0 = 1.0  # reference distance in meters
-rssi0 = -20  
+# tx = 20 # for wifi
+tx = 3 # for ble 
+gain = 3.4
 n = 2.5
 anchors = [
-  (0.0, 3.048),    # transmitter C 10 ft (3.048m) up
-  (3.048, 0.0),   # transmitter B 10 ft (3.048m) to the right
-  (0.0,  0.0),    # transmitter A at one corner
+  (0.0,  5.0),    # transmitter A is 5m up
+  (10.0, 0.0),    # transmitter B is 10m to the right
+  (10.0, 10.0),   # transmitter C is 10m up and 10m right
 ]
 
-def rssi_to_distance(rssi, rssi0=rssi0, n=n, d0=d0):
-    return d0 * 10 ** ((rssi0 - rssi) / (10 * n))
+def rssi_to_distance(rssi):
+    c = 3e8
+    freq = 2.4e9
+    k_dB = 20 * math.log10(4 * math.pi / c)
+    num  = 3 + 3.4 - rssi - 20*math.log10(freq) - k_dB
+    return 10 ** (num / 20)
 
 def trilaterate(anchors, distances):
     (x1,y1),(x2,y2),(x3,y3) = anchors
@@ -47,4 +54,4 @@ r2 = rssi_to_distance(avg2)
 r3 = rssi_to_distance(avg3)
 distances = [r1, r2, r3]   
 x, y = trilaterate(anchors, distances)
-print(f"Estimated position: x={x/10:.2f} m, y={y/10:.2f} m")
+print(f"Estimated position: x={x:.2f} m, y={y:.2f} m")
