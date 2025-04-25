@@ -1,0 +1,146 @@
+[
+  {
+    "point": [
+      1,
+      1
+    ],
+    "tech": "BLE",
+    "error": 6.12
+  },
+  {
+    "point": [
+      1,
+      4.5
+    ],
+    "tech": "BLE",
+    "error": 1.64
+  },
+  {
+    "point": [
+      1.0,
+      9.0
+    ],
+    "tech": "BLE",
+    "error": 1.25
+  },
+  {
+    "point": [
+      4.5,
+      1.0
+    ],
+    "tech": "BLE",
+    "error": 0.31
+  },
+  {
+    "point": [
+      4.5,
+      4.5
+    ],
+    "tech": "BLE",
+    "error": 0.44
+  },
+  {
+    "point": [
+      4.5,
+      9.0
+    ],
+    "tech": "BLE",
+    "error": 0.42
+  },
+  {
+    "point": [
+      9.0,
+      1.0
+    ],
+    "tech": "BLE",
+    "error": 0.49
+  },
+  {
+    "point": [
+      9.0,
+      4.5
+    ],
+    "tech": "BLE",
+    "error": 0.19
+  },
+  {
+    "point": [
+      9.0,
+      9.0
+    ],
+    "tech": "BLE",
+    "error": 0.57
+  },
+  {
+    "point": [
+      1,
+      1
+    ],
+    "tech": "Wi-Fi",
+    "error": 3.24
+  },
+  {
+    "point": [
+      1,
+      4.5
+    ],
+    "tech": "Wi-Fi",
+    "error": 0.38
+  },
+  {
+    "point": [
+      1.0,
+      9.0
+    ],
+    "tech": "Wi-Fi",
+    "error": 2.71
+  },
+  {
+    "point": [
+      4.5,
+      1.0
+    ],
+    "tech": "Wi-Fi",
+    "error": 0.49
+  },
+  {
+    "point": [
+      4.5,
+      4.5
+    ],
+    "tech": "Wi-Fi",
+    "error": 0.42
+  },
+  {
+    "point": [
+      4.5,
+      9.0
+    ],
+    "tech": "Wi-Fi",
+    "error": 0.16
+  },
+  {
+    "point": [
+      9.0,
+      1.0
+    ],
+    "tech": "Wi-Fi",
+    "error": 1.01
+  },
+  {
+    "point": [
+      9.0,
+      4.5
+    ],
+    "tech": "Wi-Fi",
+    "error": 0.14
+  },
+  {
+    "point": [
+      9.0,
+      9.0
+    ],
+    "tech": "Wi-Fi",
+    "error": 1.11
+  }
+]
